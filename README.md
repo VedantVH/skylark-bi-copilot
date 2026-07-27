@@ -108,40 +108,35 @@ Output: Weighted Pipeline: ₹92.22 Cr (40% of total) · Top Client: Tata Power 
 
 ```mermaid
 graph TD
-    classDef frontend fill:#1e1b4b,stroke:#6366f1,stroke-width:2px,color:#ffffff
-    classDef backend fill:#064e3b,stroke:#10b981,stroke-width:2px,color:#ffffff
-    classDef ai fill:#312e81,stroke:#818cf8,stroke-width:2px,color:#ffffff
-    classDef data fill:#701a75,stroke:#f43f5e,stroke-width:2px,color:#ffffff
-
-    subgraph FE ["🎨 FRONTEND TIER (Vercel Edge Node)"]
-        UI["<b>Next.js 16 App Router</b><br/>Turbopack • Tailwind • Recharts"]
-        AuthView["<b>Auth Console</b> (/login)"]
-        DashView["<b>Executive Analytics</b> (Overview, Forecast, Quality)"]
-        AIChatView["<b>AI Command Console</b> (Conversational Chat)"]
+    subgraph FE ["Frontend Tier — Next.js 16 Edge Node"]
+        UI["Next.js 16 App Router<br/><i>Turbopack • Tailwind CSS • Recharts</i>"]
+        AuthView["Auth Console (/login)"]
+        DashView["Executive Analytics Dashboard"]
+        AIChatView["AI Command Console"]
     end
 
-    subgraph API ["⚙️ API GATEWAY & BACKEND TIER (Render Cloud Platform)"]
-        Router["<b>FastAPI Middleware Layer</b><br/>JWT Security & CORS Headers"]
+    subgraph API ["API Gateway & Backend Tier — FastAPI"]
+        Router["FastAPI Application Gateway<br/><i>JWT Bearer Security & CORS Middleware</i>"]
         ChatEP["POST /chat"]
         DashEP["GET /api/dashboard/*"]
         ReportEP["GET /api/reports/*"]
     end
 
-    subgraph SERVICES ["🤖 SERVICE LAYER & AI ENGINE"]
-        GeminiService["<b>Google Gemini 2.0 Flash SDK</b><br/>Tool Planner & Intent Parsing"]
-        AnalyticsEngine["<b>Business Analytics Engine</b><br/>Pipeline Aggregations & Health Scoring"]
-        InsightEngine["<b>Insight Engine</b><br/>Automated Risk & Opportunity Matrix"]
-        CrossBoardEngine["<b>Cross-Board Analytics</b><br/>Deal-to-WorkOrder Conversion Join"]
+    subgraph SERVICES ["Service Layer & Autonomous AI Engine"]
+        GeminiService["Google Gemini 2.0 Flash SDK<br/><i>Tool Planner & Natural Language Parser</i>"]
+        AnalyticsEngine["Business Analytics Engine<br/><i>Pipeline Aggregations & Health Scoring</i>"]
+        InsightEngine["Insight Engine<br/><i>Automated Risk & Opportunity Matrix</i>"]
+        CrossBoardEngine["Cross-Board Analytics<br/><i>Deal-to-WorkOrder Conversion Join</i>"]
     end
 
-    subgraph DATA ["📊 LIVE DATA INTEGRATION LAYER"]
-        MondayClient["<b>MondayRepository</b><br/>GraphQL Query Builder & Client"]
-        DealsBoard["<b>Deal Funnel Board (#5030219244)</b><br/>345 Active Deals"]
-        WOBoard["<b>Work Order Tracker (#5030219254)</b><br/>177 Active Projects"]
+    subgraph DATA ["Data Integration Layer — Monday.com Telemetry"]
+        MondayClient["MondayRepository<br/><i>GraphQL Query Builder & Data Client</i>"]
+        DealsBoard["Deal Funnel Board (#5030219244)<br/><i>345 Active Deals</i>"]
+        WOBoard["Work Order Tracker (#5030219254)<br/><i>177 Active Projects</i>"]
     end
 
     %% Flow Connections
-    UI -->|HTTPS + JWT Bearer| Router
+    UI -->|HTTPS / REST API| Router
     Router --> ChatEP
     Router --> DashEP
     Router --> ReportEP
@@ -156,13 +151,8 @@ graph TD
     InsightEngine --> MondayClient
     CrossBoardEngine --> MondayClient
 
-    MondayClient -->|GraphQL Telemetry| DealsBoard
-    MondayClient -->|GraphQL Telemetry| WOBoard
-
-    class UI,AuthView,DashView,AIChatView frontend
-    class Router,ChatEP,DashEP,ReportEP backend
-    class GeminiService,AnalyticsEngine,InsightEngine,CrossBoardEngine ai
-    class MondayClient,DealsBoard,WOBoard data
+    MondayClient -->|GraphQL Queries| DealsBoard
+    MondayClient -->|GraphQL Queries| WOBoard
 ```
 
 ### 🧱 System Layer Breakdown
