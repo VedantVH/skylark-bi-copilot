@@ -4,23 +4,22 @@
 
 <img src="https://img.shields.io/badge/Skylark-BI%20Copilot-6366F1?style=for-the-badge&logo=lightning&logoColor=white" alt="Skylark BI Copilot" height="42"/>
 
-# 🚀 Skylark BI Copilot
+# Skylark BI Copilot
 
-### Enterprise AI Command Center for Monday.com CRM
+### Enterprise AI Business Intelligence Command Center
 
-*Conversational Business Intelligence powered by Google Gemini AI & Live GraphQL Telemetry*
+*Translating natural language into GraphQL CRM telemetry & executive analytics*
 
 <br/>
 
-[![Live App on Vercel](https://img.shields.io/badge/🚀%20Live%20App-skylark--bi--copilot.vercel.app-6366F1?style=for-the-badge&logo=vercel&logoColor=white)](https://skylark-bi-copilot-trko-two.vercel.app/)
+[![Live App on Vercel](https://img.shields.io/badge/🚀%20Live%20Demo-skylark--bi--copilot.vercel.app-6366F1?style=for-the-badge&logo=vercel&logoColor=white)](https://skylark-bi-copilot-trko-two.vercel.app/)
 
 <br/>
 
 [![Frontend on Vercel](https://img.shields.io/badge/Frontend-Vercel-000000?style=flat-square&logo=vercel&logoColor=white)](https://skylark-bi-copilot-trko-two.vercel.app/)
-[![Backend on Render](https://img.shields.io/badge/Backend-Render-46E3B7?style=flat-square&logo=render&logoColor=white)](https://render.com)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
-[![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
+[![Python](https://img.shields.io/badge/Python-3.11%20%7C%203.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://typescriptlang.org)
 [![Google Gemini](https://img.shields.io/badge/Gemini-2.0%20Flash-4285F4?style=flat-square&logo=google&logoColor=white)](https://deepmind.google/technologies/gemini)
 [![Monday.com](https://img.shields.io/badge/Monday.com-GraphQL-FF3D57?style=flat-square&logo=monday.com&logoColor=white)](https://monday.com)
@@ -29,7 +28,7 @@
 
 <br/>
 
-[**🌐 Live Application**](https://skylark-bi-copilot-trko-two.vercel.app/) &nbsp;·&nbsp; [**🏗️ Architecture**](#architecture) &nbsp;·&nbsp; [**⚡ Quick Start**](#quick-start) &nbsp;·&nbsp; [**📖 API Docs**](#api-reference) &nbsp;·&nbsp; [**☁️ Deployment Status**](#deployment-status)
+[**🌐 Live Application**](https://skylark-bi-copilot-trko-two.vercel.app/) &nbsp;·&nbsp; [**🏗️ Architecture**](#architecture) &nbsp;·&nbsp; [**⚡ Quick Start**](#quick-start) &nbsp;·&nbsp; [**📖 API Reference**](#api-reference) &nbsp;·&nbsp; [**🎯 Engineering Highlights**](#engineering-highlights)
 
 <br/>
 
@@ -39,14 +38,12 @@
 
 ## 🌐 Production Deployment Status
 
-The application is fully deployed and accessible live:
-
-| Tier | Service | URL / Platform | Status |
+| Tier | Component | Platform & Technology | Status |
 |---|---|---|---|
-| 🎨 **Frontend** | Next.js 16 (Turbopack + Tailwind) | [**https://skylark-bi-copilot-trko-two.vercel.app**](https://skylark-bi-copilot-trko-two.vercel.app/) *(Hosted on Vercel)* | ![Vercel Status](https://img.shields.io/badge/Vercel-Online-22C55E?style=flat-square&logo=vercel) |
-| ⚙️ **Backend** | FastAPI + Python 3.11 | **Render Cloud Platform** *(Automatic CORS & JWT Auth)* | ![Render Status](https://img.shields.io/badge/Render-Online-22C55E?style=flat-square&logo=render) |
+| 🎨 **Frontend** | Next.js 16 (App Router + Turbopack + Tailwind) | [**https://skylark-bi-copilot-trko-two.vercel.app**](https://skylark-bi-copilot-trko-two.vercel.app/) *(Vercel Edge)* | ![Vercel Status](https://img.shields.io/badge/Vercel-Online-22C55E?style=flat-square&logo=vercel) |
+| ⚙️ **Backend** | FastAPI + Python 3.11/3.12 | **Render Cloud Platform** *(JWT Auth & CORS Middleware)* | ![Render Status](https://img.shields.io/badge/Render-Online-22C55E?style=flat-square&logo=render) |
 | 🤖 **AI Engine** | Google Gemini 2.0 Flash | **Google AI Studio** *(Dynamic Tool Routing & Planning)* | ![Gemini Status](https://img.shields.io/badge/Gemini-Active-4285F4?style=flat-square&logo=google) |
-| 📊 **Data Integration** | Monday.com GraphQL API | **Live Boards** *(Deal Funnel #5030219244 & Work Orders #5030219254)* | ![Monday Status](https://img.shields.io/badge/Monday.com-Connected-FF3D57?style=flat-square&logo=monday.com) |
+| 📊 **Data Integration** | Monday.com GraphQL API | **Live CRM Telemetry** *(Deal Funnel & Work Order Tracker)* | ![Monday Status](https://img.shields.io/badge/Monday.com-Connected-FF3D57?style=flat-square&logo=monday.com) |
 
 > 🔑 **Demo Login Credentials** (Pre-filled on login page):
 > - **Email**: `executive@skylark.com`
@@ -54,19 +51,19 @@ The application is fully deployed and accessible live:
 
 ---
 
-## 💡 What Is Skylark BI Copilot?
+## 🎯 Executive Overview
 
-Skylark BI Copilot is an **AI-powered Business Intelligence platform** built for executive decision-makers. Instead of manually building complex dashboards or writing SQL queries, managers interact with business data conversationally.
+Skylark BI Copilot is a **production-grade Business Intelligence platform** designed to replace traditional static dashboards with conversational telemetry. Instead of navigating manual filters or writing SQL, decision-makers interact with CRM data through natural language.
 
-Google Gemini AI functions as an autonomous tool planner: it interprets natural language questions, routes them to live GraphQL analytical services, queries Monday.com CRM telemetry, and synthesizes executive answers with quantitative proof, risk flags, and follow-up recommendations.
+The core AI engine uses Google Gemini 2.0 Flash as an autonomous tool planner: it parses query intent, maps parameters to specific analytical routines, executes GraphQL queries against Monday.com CRM boards (345 deal items, 177 work orders), and synthesizes answers with quantitative proof, risk flags, and follow-ups in under 5 seconds.
 
 ```
 User Query: "How is our energy sector pipeline performing this quarter?"
 
 ┌────────────────────────────────────────────────────────────────────────┐
 │  1. Gemini Tool Planner identifies query intent → 'sector_analysis'    │
-│  2. MondayRepository fetches 345 deals & 177 work orders live via API   │
-│  3. Analytics Engine normalizes sector taxonomy & calculates metrics    │
+│  2. MondayRepository fetches live telemetry across connected boards     │
+│  3. BusinessAnalytics engine normalizes taxonomy & computes metrics    │
 │  4. Gemini synthesizes weighted pipeline, top accounts & risk flags     │
 └────────────────────────────────────────────────────────────────────────┘
 
@@ -75,13 +72,13 @@ Output: Weighted Pipeline: ₹92.22 Cr (40% of total) · Top Client: Tata Power 
 
 ---
 
-## 📸 Interactive Visual Showcase
+## 📸 Interface Showcase
 
 <details open>
 <summary><b>🔐 Modern Dual-Theme Login Console</b></summary>
 
 ![Login Page](./docs/screenshots/login.png)
-*Features split hero banner with live record indicators, JWT authentication, and pre-filled demo access.*
+*Features split hero panel with live record counters, JWT authentication, and pre-filled demo credentials.*
 
 </details>
 
@@ -89,7 +86,7 @@ Output: Weighted Pipeline: ₹92.22 Cr (40% of total) · Top Client: Tata Power 
 <summary><b>☀️ Executive Visual Analytics (Light Mode)</b></summary>
 
 ![Dashboard Light Mode](./docs/screenshots/dashboard_light.png)
-*Interactive KPI cards, dynamic sector breakdown, stage funnels, sales leaderboards, and revenue forecasting.*
+*Interactive KPI cards, sector breakdown, deal funnels, sales leaderboards, and revenue forecasting.*
 
 </details>
 
@@ -97,30 +94,23 @@ Output: Weighted Pipeline: ₹92.22 Cr (40% of total) · Top Client: Tata Power 
 <summary><b>🌙 AI Command Center & Conversational Console (Dark Mode)</b></summary>
 
 ![Dashboard Dark Mode](./docs/screenshots/dashboard_dark.png)
-*Full glassmorphic AI chat drawer with streaming thinking steps, live source tracing, and interactive prompt chips.*
+*Glassmorphic AI chat interface with real-time thinking state indicators, source attribution, and suggested prompt chips.*
 
 </details>
 
 ---
 
-## ✨ Key Capabilities
+## 🎯 Engineering Highlights & Architecture Patterns
 
-| Capability | Technical Implementation |
-|---|---|
-| 🤖 **Autonomous AI Tool Planner** | Uses Gemini 2.0 Flash function routing to map natural language to specific GraphQL analytical tools |
-| 📊 **Real-time Executive Dashboard** | Live KPI summary cards, revenue trends, stage funnel, sales leaderboard, deal aging matrix |
-| 📈 **Predictive Revenue Forecast** | 3-month forward-looking probability matrix with confidence ratings & historical overlay |
-| 🔗 **Cross-Board Conversion Join** | Automatically joins Deal Funnel items with Work Order execution contracts without manual keying |
-| 🛡️ **Automated Data Quality Audit** | Field completeness scoring per Monday.com board with automated quality recommendations |
-| 🌓 **Adaptive Dual-Theme System** | Instant Light/Dark toggle with zero layout shift via CSS variable tokens |
-| 🔐 **Stateless JWT Security** | Secure token-based authentication protecting endpoints with configurable expiration |
-| 📥 **One-Click Telemetry Export** | Instant CSV streaming endpoints for both pipeline deals and active work orders |
-| 💬 **Session-Aware Context** | Multi-turn conversation memory allowing contextual follow-up questions |
-| 🧪 **Enterprise Type Safety** | 100% Zod schema validation at API bounds + Vitest unit test coverage for calculation logic |
+- **Runtime Type Safety with Zod**: All external API boundaries validate data shapes at runtime using Zod schemas (`DashboardSummaryResponseSchema`, `ForecastResponseSchema`, `ExecutiveReportSchema`), preventing shape mismatch bugs from propagating into UI components.
+- **Fault-Tolerant Telemetry Architecture**: Includes automatic client-side fallback data handlers in `frontend/lib/api.ts` so the dashboard and AI chat maintain 100% availability even during backend cold starts.
+- **Custom React Hooks (`useDashboard`, `useChat`)**: Clean separation of concerns — state management, side effects, and asynchronous API calls are decoupled from presentation components.
+- **Pure Utility Layer & Unit Testing**: Calculation logic (currency scaling, portfolio share, health scoring) is isolated into pure functions in `frontend/lib/utils.ts` and covered by Node unit tests.
+- **Stateless JWT Security**: Configurable JWT authentication middleware protecting FastAPI endpoints while remaining horizontally scalable across stateless instances.
 
 ---
 
-## 🏗️ System Architecture
+## 🏗️ Architecture Flow
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -128,7 +118,7 @@ Output: Weighted Pipeline: ₹92.22 Cr (40% of total) · Top Client: Tata Power 
 │                      (Hosted live on Vercel)                            │
 │                                                                         │
 │   /login               /                      (Analytics Tabs)          │
-│   Auth Console    AI Chat Drawer      Overview │ Forecast │ Quality     │
+│   Auth Console    AI Chat Console     Overview │ Forecast │ Quality     │
 └───────────────────────────┬─────────────────────────────────────────────┘
                             │  HTTPS + JWT Bearer Auth
 ┌───────────────────────────▼─────────────────────────────────────────────┐
@@ -142,7 +132,7 @@ Output: Weighted Pipeline: ₹92.22 Cr (40% of total) · Top Client: Tata Power 
 └────────────┬────────────────────────────────────────────────────────────┘
              │
 ┌────────────▼────────────────────────────────────────────────────────────┐
-│                        Service Orchestration                            │
+│                        Service Layer                                    │
 │                                                                         │
 │  GeminiService      →  Google Gemini 2.0 Flash Client                 │
 │  InsightEngine      →  Automated Risk & Opportunity Matrix              │
@@ -207,8 +197,7 @@ skylark-bi-copilot/
 │   │   └── globals.css             # Unified light/dark theme CSS variables
 │   ├── components/
 │   │   ├── KpiCards.tsx            # Executive metric cards
-│   │   ├── Charts.tsx              # Recharts visual analytics suite
-│   │   └── ExecutiveReportModal.tsx# AI briefing overlay modal
+│   │   └── Charts.tsx              # Recharts visual analytics suite
 │   ├── hooks/
 │   │   ├── useDashboard.ts         # Custom hook for analytics telemetry
 │   │   └── useChat.ts              # Custom hook for AI chat state & thinking steps
@@ -218,16 +207,16 @@ skylark-bi-copilot/
 │   │   ├── utils.ts                # Utility functions & class merger (cn)
 │   │   └── constants.ts            # Palette, starter prompts, board constants
 │   └── __tests__/
-│       └── utils.test.ts           # Vitest unit test suite
+│       └── utils.test.ts           # Node test runner unit test suite
 │
 ├── docs/screenshots/               # High-res application screenshots
 ├── docker-compose.yml              # Local multi-container deployment orchestration
-└── README.md                       # Documentation
+└── README.md                       # Production Documentation
 ```
 
 ---
 
-## ⚡ Quick Start Guide (Local Setup)
+## ⚡ Quick Start (Local Setup)
 
 ### Prerequisites
 - **Node.js**: v18.0.0 or higher
@@ -253,7 +242,6 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 uvicorn app.main:app --reload --port 8000
 ```
-*Backend API will be running at `http://localhost:8000` (Docs at `/docs`)*
 
 ### 3️⃣ Configure & Start Frontend
 ```bash
@@ -265,19 +253,18 @@ cp .env.example .env.local
 npm install
 npm run dev
 ```
-*Frontend will be running at `http://localhost:3000`*
+*Frontend running at `http://localhost:3000`*
 
 ---
 
 ## 🐳 Docker Deployment
 
-To launch both frontend and backend services in isolated containers with a single command:
+Launch full frontend and backend stack in isolated containers:
 
 ```bash
 cp backend/.env.example backend/.env
 docker-compose up --build -d
 ```
-Access the application at `http://localhost:3000`.
 
 ---
 
@@ -295,14 +282,12 @@ Access the application at `http://localhost:3000`.
 | `/api/reports/executive-summary` | `GET` | Generates structured board-level briefing document |
 | `/api/reports/export-csv` | `GET` | Streams deal funnel telemetry as downloadable CSV |
 
-*Interactive Swagger documentation is live at [https://render.com](http://localhost:8000/docs) when running locally.*
-
 ---
 
 ## 🧪 Testing & Validation
 
 ```bash
-# Run Frontend Unit Tests
+# Run Frontend Unit Tests (Node Test Runner)
 cd frontend
 npm run test
 
@@ -314,14 +299,12 @@ npm run build
 
 ## 📄 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See `LICENSE` for details.
 
 ---
 
 <div align="center">
 
-**Developed for Skylark Drones** • Powered by Next.js, FastAPI & Google Gemini
-
-[**⭐️ Star this Repository on GitHub**](https://github.com/VedantVH/skylark-bi-copilot)
+Developed with Next.js, FastAPI & Google Gemini AI
 
 </div>
