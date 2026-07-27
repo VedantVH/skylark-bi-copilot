@@ -83,18 +83,10 @@ Output: Weighted Pipeline: ₹92.22 Cr (40% of total) · Top Client: Tata Power 
 </details>
 
 <details open>
-<summary><b>☀️ Executive Visual Analytics Dashboard (Light Mode)</b></summary>
+<summary><b>📊 Executive Visual Analytics Command Center</b></summary>
 
-![Dashboard Light Mode](./docs/screenshots/dashboard_light.png)
+![Executive Visual Analytics](./docs/screenshots/analytics.png)
 *High-contrast executive telemetry dashboard displaying real-time Monday.com connection state, data completeness score (87.2%), four key KPI summary cards (Total Pipeline ₹23.05Cr, Expected Revenue ₹8.34Cr, Work Order Value ₹21.16Cr, Health 82/100), interactive revenue trend chart (monthly pipeline vs expected revenue), quick intelligence prompt shortcuts, and instant CSV export controls.*
-
-</details>
-
-<details open>
-<summary><b>🌙 AI Command Center & Conversational Console (Dark Mode)</b></summary>
-
-![Dashboard Dark Mode](./docs/screenshots/dashboard_dark.png)
-*Glassmorphic dark-theme AI command center providing natural language CRM query processing powered by Google Gemini 2.0 Flash, featuring live thinking step indicators, prompt recommendation chips, quantitative pipeline breakdowns, and automatic leadership briefing overlay modals.*
 
 </details>
 
