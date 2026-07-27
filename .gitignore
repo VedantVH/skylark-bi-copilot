@@ -1,0 +1,43 @@
+# Python
+backend/venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Node
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# Environment — never commit secrets
+.env
+.env.local
+.env.production
+backend/.env
+frontend/.env.local
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/settings.json
+.idea/
+
+# Submissions / build artifacts
+*.zip
+*.tar.gz
+package_submission.py
+
+# Screenshots generated during development
+frontend/dashboard_*.png
+frontend/login_page.png
+frontend/dashboard_nextlevel.png
