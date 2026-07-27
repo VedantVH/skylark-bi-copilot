@@ -1,5 +1,4 @@
 from fastapi import APIRouter
-from google import genai
 
 from app.services.conversation_memory import conversation_memory
 from app.config import GEMINI_API_KEY
@@ -119,6 +118,7 @@ def list_models():
     try:
         if not GEMINI_API_KEY:
             return {"status": "GEMINI_API_KEY missing", "models": []}
+        from google import genai  # lazy import — avoids startup crash if package missing
         client = genai.Client(api_key=GEMINI_API_KEY)
         models = []
         for model in client.models.list():
