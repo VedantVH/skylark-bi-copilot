@@ -106,63 +106,64 @@ Output: Weighted Pipeline: ₹92.22 Cr (40% of total) · Top Client: Tata Power 
 <a id="architecture"></a>
 ## 🏗️ Architecture Flow
 
+### 💡 High-Level Data Journey (How it Works)
+
+```mermaid
+flowchart LR
+    A["👤 Executive / User<br/><i>Asks query in plain text</i>"] --> B["🎨 Next.js 16 Client<br/><i>App Router UI & Auth</i>"]
+    B -->|HTTPS + JWT| C["⚡ FastAPI Gateway<br/><i>Security & Route Handler</i>"]
+    C --> D["🤖 Google Gemini 2.0 AI<br/><i>Intent & Tool Planner</i>"]
+    D --> E["📊 Monday.com CRM<br/><i>GraphQL Telemetry</i>"]
+    E -->|Live Data| C
+    C -->|Calculates Metrics| B
+    B -->|Visual Analytics & Chat| A
+```
+
+---
+
+### 🧱 Detailed System Architecture
+
 ```mermaid
 graph TD
-    subgraph FE ["Frontend Tier — Next.js 16 Edge Node"]
-        UI["Next.js 16 App Router<br/><i>Turbopack • Tailwind CSS • Recharts</i>"]
-        AuthView["Auth Console (/login)"]
-        DashView["Executive Analytics Dashboard"]
-        AIChatView["AI Command Console"]
+    subgraph FE ["1. FRONTEND TIER (Vercel Edge)"]
+        UI["<b>Next.js 16 App Router</b><br/>React 19 • Tailwind CSS • Recharts"]
+        AuthView["<b>Auth Console</b> (/login)"]
+        DashView["<b>Visual Dashboard</b> (KPIs & Trends)"]
+        AIChatView["<b>AI Command Console</b> (Conversational Chat)"]
     end
 
-    subgraph API ["API Gateway & Backend Tier — FastAPI"]
-        Router["FastAPI Application Gateway<br/><i>JWT Bearer Security & CORS Middleware</i>"]
-        ChatEP["POST /chat"]
-        DashEP["GET /api/dashboard/*"]
-        ReportEP["GET /api/reports/*"]
+    subgraph API ["2. API GATEWAY TIER (Render Cloud)"]
+        Router["<b>FastAPI Application Server</b><br/>JWT Security & CORS Middleware"]
     end
 
-    subgraph SERVICES ["Service Layer & Autonomous AI Engine"]
-        GeminiService["Google Gemini 2.0 Flash SDK<br/><i>Tool Planner & Natural Language Parser</i>"]
-        AnalyticsEngine["Business Analytics Engine<br/><i>Pipeline Aggregations & Health Scoring</i>"]
-        InsightEngine["Insight Engine<br/><i>Automated Risk & Opportunity Matrix</i>"]
-        CrossBoardEngine["Cross-Board Analytics<br/><i>Deal-to-WorkOrder Conversion Join</i>"]
+    subgraph SERVICES ["3. AI & ANALYTICS ENGINE"]
+        GeminiService["<b>Google Gemini 2.0 Flash SDK</b><br/>Natural Language Intent Router"]
+        AnalyticsEngine["<b>Business Analytics Engine</b><br/>Pipeline Math & Health Scoring"]
     end
 
-    subgraph DATA ["Data Integration Layer — Monday.com Telemetry"]
-        MondayClient["MondayRepository<br/><i>GraphQL Query Builder & Data Client</i>"]
-        DealsBoard["Deal Funnel Board (#5030219244)<br/><i>345 Active Deals</i>"]
-        WOBoard["Work Order Tracker (#5030219254)<br/><i>177 Active Projects</i>"]
+    subgraph DATA ["4. CRM DATA INTEGRATION"]
+        MondayClient["<b>Monday.com GraphQL Client</b>"]
+        DealsBoard["<b>Deal Funnel Board</b> (#5030219244)<br/>345 Live Items"]
+        WOBoard["<b>Work Order Tracker</b> (#5030219254)<br/>177 Active Projects"]
     end
 
-    %% Flow Connections
-    UI -->|HTTPS / REST API| Router
-    Router --> ChatEP
-    Router --> DashEP
-    Router --> ReportEP
-
-    ChatEP --> GeminiService
-    DashEP --> AnalyticsEngine
-    ReportEP --> InsightEngine
-
-    GeminiService --> AnalyticsEngine
-    GeminiService --> CrossBoardEngine
+    UI -->|HTTPS Requests| Router
+    Router --> GeminiService
+    Router --> AnalyticsEngine
+    GeminiService --> MondayClient
     AnalyticsEngine --> MondayClient
-    InsightEngine --> MondayClient
-    CrossBoardEngine --> MondayClient
-
     MondayClient -->|GraphQL Queries| DealsBoard
     MondayClient -->|GraphQL Queries| WOBoard
 ```
 
-### 🧱 System Layer Breakdown
+---
 
-| Tier | Component | Functionality & Specifications |
-|---|---|---|
-| 🎨 **Frontend Tier** | **Next.js 16 App Router** | Renders React 19 UI components with Turbopack acceleration, Tailwind styling, and client-side Zod shape validation. |
-| ⚙️ **API Gateway Tier** | **FastAPI Async Server** | Enforces stateless JWT bearer token authentication, handles CORS preflight, and routes requests to async handlers. |
-| 🤖 **AI & Analytics Tier** | **Gemini 2.0 Flash & Analytics Engine** | Parses natural language intent into structured parameters, calculates forward-looking revenue forecasts, and scores pipeline health. |
-| 📊 **Data Integration Tier** | **Monday.com GraphQL Client** | Executes optimized GraphQL queries against 2 production CRM boards (345 deals & 177 work orders) with zero intermediate DB overhead. |
+### 🔄 End-to-End Execution Steps
+
+1. **User Prompt Input**: An executive enters a query in natural language (e.g., *"How is our energy sector pipeline performing this quarter?"*).
+2. **AI Intent & Tool Planning**: FastAPI forwards the prompt to Google Gemini 2.0 Flash, which parses the intent, identifies required parameters, and selects analytical tools.
+3. **Live CRM Fetch**: `MondayRepository` executes targeted GraphQL queries directly against Monday.com boards (345 deal items, 177 work orders) with zero intermediate database latency.
+4. **Synthesis & Visualization**: The analytics engine normalizes metrics, detects risk flags, and returns structured data to the frontend for real-time Recharts rendering and chat responses (< 4.2s response time).
 
 ---
 
