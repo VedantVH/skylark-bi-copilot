@@ -134,6 +134,7 @@ export const ExecutiveReportSchema = z.object({
 export const LoginResponseSchema = z.object({
   token: z.string(),
   user: z.object({
+    id: z.string().optional(),
     name: z.string(),
     email: z.string(),
     role: z.string(),
