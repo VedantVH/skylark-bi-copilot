@@ -53,11 +53,11 @@ generate executive dashboards, and produce board-level intelligence reports.
     ]
 )
 
-# CORS — allow all origins for hosted demo
+# CORS — allow all origins for hosted demo (using Bearer tokens, credentials false for wildcard support)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
