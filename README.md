@@ -78,15 +78,15 @@ Output: Weighted Pipeline: ₹92.22 Cr (40% of total) · Top Client: Tata Power 
 <summary><b>🔐 Modern Dual-Theme Login Console</b></summary>
 
 ![Login Page](./docs/screenshots/login.png)
-*Features split hero panel with live record counters, JWT authentication, and pre-filled demo credentials.*
+*Split-screen authentication portal with live CRM telemetry counters (345 active deals, 177 work orders), stateless JWT token issuance, and pre-filled executive demo credentials.*
 
 </details>
 
 <details open>
-<summary><b>☀️ Executive Visual Analytics (Light Mode)</b></summary>
+<summary><b>☀️ Executive Visual Analytics Dashboard (Light Mode)</b></summary>
 
 ![Dashboard Light Mode](./docs/screenshots/dashboard_light.png)
-*Interactive KPI cards, sector breakdown, deal funnels, sales leaderboards, and revenue forecasting.*
+*High-contrast executive telemetry dashboard displaying real-time Monday.com connection state, data completeness score (87.2%), four key KPI summary cards (Total Pipeline ₹23.05Cr, Expected Revenue ₹8.34Cr, Work Order Value ₹21.16Cr, Health 82/100), interactive revenue trend chart (monthly pipeline vs expected revenue), quick intelligence prompt shortcuts, and instant CSV export controls.*
 
 </details>
 
@@ -94,7 +94,7 @@ Output: Weighted Pipeline: ₹92.22 Cr (40% of total) · Top Client: Tata Power 
 <summary><b>🌙 AI Command Center & Conversational Console (Dark Mode)</b></summary>
 
 ![Dashboard Dark Mode](./docs/screenshots/dashboard_dark.png)
-*Glassmorphic AI chat interface with real-time thinking state indicators, source attribution, and suggested prompt chips.*
+*Glassmorphic dark-theme AI command center providing natural language CRM query processing powered by Google Gemini 2.0 Flash, featuring live thinking step indicators, prompt recommendation chips, quantitative pipeline breakdowns, and automatic leadership briefing overlay modals.*
 
 </details>
 
