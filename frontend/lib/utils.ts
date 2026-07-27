@@ -3,6 +3,17 @@
  * Extracted from JSX to keep components presentation-only.
  */
 
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+/**
+ * Merges Tailwind classes safely — resolves conflicts like "p-2 p-4" → "p-4".
+ * Required by shadcn/ui components.
+ */
+export function cn(...inputs: ClassValue[]): string {
+  return twMerge(clsx(inputs));
+}
+
 /**
  * Formats a rupee value into human-readable Indian scale:
  * - ≥ 1 Crore  → "₹X.XXCr"

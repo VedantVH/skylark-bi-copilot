@@ -126,6 +126,9 @@ export const ExecutiveReportSchema = z.object({
   executive_brief: z.string(),
   kpi: KpiSummarySchema.optional(),
   health: BusinessHealthSchema.optional(),
+  insights: z.array(z.string()).optional(),
+  risks: z.array(z.string()).optional(),
+  recommendations: z.array(z.string()).optional(),
 });
 
 export const LoginResponseSchema = z.object({
