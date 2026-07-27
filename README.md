@@ -24,7 +24,7 @@
 [![Google Gemini](https://img.shields.io/badge/Gemini-2.0%20Flash-4285F4?style=flat-square&logo=google&logoColor=white)](https://deepmind.google/technologies/gemini)
 [![Monday.com](https://img.shields.io/badge/Monday.com-GraphQL-FF3D57?style=flat-square&logo=monday.com&logoColor=white)](https://monday.com)
 [![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?style=flat-square&logo=docker&logoColor=white)](https://docker.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-22C55E?style=flat-square)](./LICENSE)
+
 
 <br/>
 
