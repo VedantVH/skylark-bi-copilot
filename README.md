@@ -197,7 +197,8 @@ skylark-bi-copilot/
 │   │   └── globals.css             # Unified light/dark theme CSS variables
 │   ├── components/
 │   │   ├── KpiCards.tsx            # Executive metric cards
-│   │   └── Charts.tsx              # Recharts visual analytics suite
+│   │   ├── Charts.tsx              # Recharts visual analytics suite
+│   │   └── ExecutiveReportModal.tsx# AI briefing overlay modal
 │   ├── hooks/
 │   │   ├── useDashboard.ts         # Custom hook for analytics telemetry
 │   │   └── useChat.ts              # Custom hook for AI chat state & thinking steps
@@ -242,6 +243,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 uvicorn app.main:app --reload --port 8000
 ```
+*Backend running at `http://localhost:8000`*
 
 ### 3️⃣ Configure & Start Frontend
 ```bash
@@ -297,6 +299,7 @@ npm run build
 
 ---
 
+## 📄 License
 
 Distributed under the MIT License. See `LICENSE` for details.
 
