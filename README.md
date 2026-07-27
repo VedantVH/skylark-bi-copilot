@@ -100,6 +100,7 @@ Output: Weighted Pipeline: ₹92.22 Cr (40% of total) · Top Client: Tata Power 
 
 ---
 
+<a id="engineering-highlights"></a>
 ## 🎯 Engineering Highlights & Architecture Patterns
 
 - **Runtime Type Safety with Zod**: All external API boundaries validate data shapes at runtime using Zod schemas (`DashboardSummaryResponseSchema`, `ForecastResponseSchema`, `ExecutiveReportSchema`), preventing shape mismatch bugs from propagating into UI components.
@@ -110,6 +111,7 @@ Output: Weighted Pipeline: ₹92.22 Cr (40% of total) · Top Client: Tata Power 
 
 ---
 
+<a id="architecture"></a>
 ## 🏗️ Architecture Flow
 
 ```
@@ -217,6 +219,7 @@ skylark-bi-copilot/
 
 ---
 
+<a id="quick-start"></a>
 ## ⚡ Quick Start (Local Setup)
 
 ### Prerequisites
@@ -270,6 +273,7 @@ docker-compose up --build -d
 
 ---
 
+<a id="api-reference"></a>
 ## 📡 API Reference Overview
 
 | Endpoint | Method | Description |
@@ -299,9 +303,10 @@ npm run build
 
 ---
 
+<a id="license"></a>
 ## 📄 License
 
-Distributed under the MIT License. See `LICENSE` for details.
+Distributed under the MIT License. See [LICENSE](./LICENSE) for details.
 
 ---
 
