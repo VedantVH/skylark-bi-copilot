@@ -106,43 +106,73 @@ Output: Weighted Pipeline: ₹92.22 Cr (40% of total) · Top Client: Tata Power 
 <a id="architecture"></a>
 ## 🏗️ Architecture Flow
 
+```mermaid
+graph TD
+    classDef frontend fill:#1e1b4b,stroke:#6366f1,stroke-width:2px,color:#ffffff
+    classDef backend fill:#064e3b,stroke:#10b981,stroke-width:2px,color:#ffffff
+    classDef ai fill:#312e81,stroke:#818cf8,stroke-width:2px,color:#ffffff
+    classDef data fill:#701a75,stroke:#f43f5e,stroke-width:2px,color:#ffffff
+
+    subgraph FE ["🎨 FRONTEND TIER (Vercel Edge Node)"]
+        UI["<b>Next.js 16 App Router</b><br/>Turbopack • Tailwind • Recharts"]
+        AuthView["<b>Auth Console</b> (/login)"]
+        DashView["<b>Executive Analytics</b> (Overview, Forecast, Quality)"]
+        AIChatView["<b>AI Command Console</b> (Conversational Chat)"]
+    end
+
+    subgraph API ["⚙️ API GATEWAY & BACKEND TIER (Render Cloud Platform)"]
+        Router["<b>FastAPI Middleware Layer</b><br/>JWT Security & CORS Headers"]
+        ChatEP["POST /chat"]
+        DashEP["GET /api/dashboard/*"]
+        ReportEP["GET /api/reports/*"]
+    end
+
+    subgraph SERVICES ["🤖 SERVICE LAYER & AI ENGINE"]
+        GeminiService["<b>Google Gemini 2.0 Flash SDK</b><br/>Tool Planner & Intent Parsing"]
+        AnalyticsEngine["<b>Business Analytics Engine</b><br/>Pipeline Aggregations & Health Scoring"]
+        InsightEngine["<b>Insight Engine</b><br/>Automated Risk & Opportunity Matrix"]
+        CrossBoardEngine["<b>Cross-Board Analytics</b><br/>Deal-to-WorkOrder Conversion Join"]
+    end
+
+    subgraph DATA ["📊 LIVE DATA INTEGRATION LAYER"]
+        MondayClient["<b>MondayRepository</b><br/>GraphQL Query Builder & Client"]
+        DealsBoard["<b>Deal Funnel Board (#5030219244)</b><br/>345 Active Deals"]
+        WOBoard["<b>Work Order Tracker (#5030219254)</b><br/>177 Active Projects"]
+    end
+
+    %% Flow Connections
+    UI -->|HTTPS + JWT Bearer| Router
+    Router --> ChatEP
+    Router --> DashEP
+    Router --> ReportEP
+
+    ChatEP --> GeminiService
+    DashEP --> AnalyticsEngine
+    ReportEP --> InsightEngine
+
+    GeminiService --> AnalyticsEngine
+    GeminiService --> CrossBoardEngine
+    AnalyticsEngine --> MondayClient
+    InsightEngine --> MondayClient
+    CrossBoardEngine --> MondayClient
+
+    MondayClient -->|GraphQL Telemetry| DealsBoard
+    MondayClient -->|GraphQL Telemetry| WOBoard
+
+    class UI,AuthView,DashView,AIChatView frontend
+    class Router,ChatEP,DashEP,ReportEP backend
+    class GeminiService,AnalyticsEngine,InsightEngine,CrossBoardEngine ai
+    class MondayClient,DealsBoard,WOBoard data
 ```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                        Next.js 16 Frontend                              │
-│                      (Hosted live on Vercel)                            │
-│                                                                         │
-│   /login               /                      (Analytics Tabs)          │
-│   Auth Console    AI Chat Console     Overview │ Forecast │ Quality     │
-└───────────────────────────┬─────────────────────────────────────────────┘
-                            │  HTTPS + JWT Bearer Auth
-┌───────────────────────────▼─────────────────────────────────────────────┐
-│                        FastAPI Backend                                  │
-│                       (Hosted on Render)                                │
-│                                                                         │
-│  POST /chat            →  AI Tool Planner (Gemini SDK)                  │
-│  GET  /api/dashboard/* →  Analytics & Health Engine                     │
-│  POST /api/auth/*      →  JWT Token Issuer                              │
-│  GET  /api/reports/*   →  Executive Summaries & CSV Exporters           │
-└────────────┬────────────────────────────────────────────────────────────┘
-             │
-┌────────────▼────────────────────────────────────────────────────────────┐
-│                        Service Layer                                    │
-│                                                                         │
-│  GeminiService      →  Google Gemini 2.0 Flash Client                 │
-│  InsightEngine      →  Automated Risk & Opportunity Matrix              │
-│  AnalyticsService   →  Pipeline Aggregations & Distribution Math        │
-│  CrossBoardAnalytics → Deal-to-WorkOrder Matching Engine                │
-│  ConversationMemory  → Session-Scoped Context Manager                   │
-└────────────┬────────────────────────────────────────────────────────────┘
-             │
-┌────────────▼────────────────────────────────────────────────────────────┐
-│                       Monday.com Repository                             │
-│                      GraphQL API Integration                            │
-│                                                                         │
-│   Board #5030219244 · Deal Funnel        (345 live items)               │
-│   Board #5030219254 · Work Order Tracker (177 active projects)          │
-└─────────────────────────────────────────────────────────────────────────┘
-```
+
+### 🧱 System Layer Breakdown
+
+| Tier | Component | Functionality & Specifications |
+|---|---|---|
+| 🎨 **Frontend Tier** | **Next.js 16 App Router** | Renders React 19 UI components with Turbopack acceleration, Tailwind styling, and client-side Zod shape validation. |
+| ⚙️ **API Gateway Tier** | **FastAPI Async Server** | Enforces stateless JWT bearer token authentication, handles CORS preflight, and routes requests to async handlers. |
+| 🤖 **AI & Analytics Tier** | **Gemini 2.0 Flash & Analytics Engine** | Parses natural language intent into structured parameters, calculates forward-looking revenue forecasts, and scores pipeline health. |
+| 📊 **Data Integration Tier** | **Monday.com GraphQL Client** | Executes optimized GraphQL queries against 2 production CRM boards (345 deals & 177 work orders) with zero intermediate DB overhead. |
 
 ---
 
